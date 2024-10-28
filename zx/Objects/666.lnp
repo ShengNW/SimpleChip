@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\ZX_SNW_music_204_AllTune.obj" 
+TO ".\Objects\666" 
+PRINT(".\Listings\666.m51") RAMSIZE(256) 

@@ -1,0 +1,937 @@
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE ZX_SNW_MUSIC_204_ALLTUNE
+OBJECT MODULE PLACED IN .\Objects\ZX_SNW_music_204_AllTune.obj
+COMPILER INVOKED BY: E:\environment\SNW_muiVision\C51\BIN\C51.EXE ZX_SNW_music_204_AllTune.c OPTIMIZE(8,SPEED) BROWSE DE
+                    -BUG OBJECTEXTEND PRINT(.\Listings\ZX_SNW_music_204_AllTune.lst) TABS(2) OBJECT(.\Objects\ZX_SNW_music_204_AllTune.obj)
+
+line level    source
+
+   1          #include <STC12C5630AD.H>
+   2          #include <intrins.h>
+   3          // Function prototypes for delays corresponding to each note
+   4          
+   5          
+   6          
+   7          void Delay3822us(void); // C3
+   8          
+   9          
+  10          
+  11          
+  12          //void Delay3822us(void);
+  13          void Delay3608us(void);
+  14          void Delay3405us(void);
+  15          void Delay3214us(void);
+  16          void Delay3034us(void);
+  17          void Delay2863us(void);
+  18          void Delay2703us(void);
+  19          void Delay2551us(void);
+  20          void Delay2408us(void);
+  21          void Delay2273us(void);
+  22          void Delay2145us(void);
+  23          void Delay2025us(void);
+  24          void Delay1911us(void);
+  25          void Delay1804us(void);
+  26          void Delay1703us(void);
+  27          void Delay1607us(void);
+  28          void Delay1517us(void);
+  29          void Delay1432us(void);
+  30          void Delay1351us(void);
+  31          void Delay1276us(void);
+  32          void Delay1204us(void);
+  33          void Delay1136us(void);
+  34          void Delay1073us(void);
+  35          void Delay1012us(void);
+  36          //void Delay956us(void);
+  37          
+  38          
+  39          
+  40          
+  41          void Delay956us(void); // C5
+  42          
+  43          
+  44          
+  45          
+  46          //void Delay956us(void); 
+  47          void Delay902us(void); void Delay851us(void); void Delay804us(void); void Delay758us(void); void Delay716u
+             -s(void); void Delay676us(void); void Delay638us(void); void Delay602us(void); void Delay568us(void); void Delay536us(voi
+             -d); void Delay506us(void); void Delay478us(void); void Delay451us(void); void Delay426us(void); void Delay402us(void); v
+             -oid Delay379us(void); void Delay358us(void); void Delay338us(void); void Delay319us(void); void Delay301us(void); void D
+             -elay284us(void); void Delay268us(void); void Delay253us(void); void Delay239us(void); void Delay225us(void); void Delay2
+             -13us(void); void Delay201us(void); void Delay190us(void); void Delay179us(void); void Delay169us(void); void Delay159us(
+             -void); void Delay150us(void); void Delay142us(void); void Delay134us(void); void Delay127us(void);
+  48          // ... (add delay function prototypes for other notes)
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 2   
+
+  49          // Function to play a specific note
+  50          void play_note(void (*delay_func)(void)) {
+  51   1          unsigned int i;
+  52   1          for (i = 0; i < 500; i++) {  // Adjust loop count for duration
+  53   2              delay_func();
+  54   2              P25 = ~P25;  // Toggle the buzzer pin
+  55   2          }
+  56   1      }
+  57          // Main function
+  58          void main(void) {
+  59   1          while (1) {  // Infinite loop
+  60   2      
+  61   2              play_note(Delay3822us); // Play C3
+  62   2            
+  63   2              //play_note(Delay3822us); 
+  64   2              play_note(Delay3608us); 
+  65   2              play_note(Delay3405us); 
+  66   2              play_note(Delay3214us); 
+  67   2              play_note(Delay3034us); 
+  68   2              play_note(Delay2863us); 
+  69   2              play_note(Delay2703us); 
+  70   2              play_note(Delay2551us); 
+  71   2              play_note(Delay2408us); 
+  72   2              play_note(Delay2273us); 
+  73   2              play_note(Delay2145us); 
+  74   2              play_note(Delay2025us); 
+  75   2              play_note(Delay1911us); 
+  76   2              play_note(Delay1804us); 
+  77   2              play_note(Delay1703us); 
+  78   2              play_note(Delay1607us); 
+  79   2              play_note(Delay1517us); 
+  80   2              play_note(Delay1432us); 
+  81   2              play_note(Delay1351us); 
+  82   2              play_note(Delay1276us); 
+  83   2              play_note(Delay1204us); 
+  84   2              play_note(Delay1136us); 
+  85   2              play_note(Delay1073us); 
+  86   2              play_note(Delay1012us); 
+  87   2              //play_note(Delay956us); 
+  88   2      
+  89   2            
+  90   2            
+  91   2            
+  92   2              play_note(Delay956us); // Play C5
+  93   2              
+  94   2              
+  95   2              
+  96   2              
+  97   2              //play_note(Delay956us); 
+  98   2              play_note(Delay902us); play_note(Delay851us); play_note(Delay804us); play_note(Delay758us); play_note(
+             -Delay716us); play_note(Delay676us); play_note(Delay638us); play_note(Delay602us); play_note(Delay568us); play_note(Delay
+             -536us); play_note(Delay506us); play_note(Delay478us); play_note(Delay451us); play_note(Delay426us); play_note(Delay402us
+             -); play_note(Delay379us); play_note(Delay358us); play_note(Delay338us); play_note(Delay319us); play_note(Delay301us); pl
+             -ay_note(Delay284us); play_note(Delay268us); play_note(Delay253us); play_note(Delay239us); play_note(Delay225us); play_no
+             -te(Delay213us); play_note(Delay201us); play_note(Delay190us); play_note(Delay179us); play_note(Delay169us); play_note(De
+             -lay159us); play_note(Delay150us); play_note(Delay142us); play_note(Delay134us); play_note(Delay127us);
+  99   2              // ... (call play_note with other delay functions for other notes)
+ 100   2          }
+ 101   1      }
+ 102          // Delay function implementations (placeholders)
+ 103          
+ 104          // ... (implement other delay functions similarly)
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 3   
+
+ 105          
+ 106          
+ 107          
+ 108          
+ 109          
+ 110          
+ 111          
+ 112          
+ 113          
+ 114          void Delay3822us(void)  //@11.0592MHz
+ 115          {
+ 116   1        unsigned char data i, j;
+ 117   1      
+ 118   1        _nop_();
+ 119   1        _nop_();
+ 120   1        i = 42;
+ 121   1        j = 25;
+ 122   1        do
+ 123   1        {
+ 124   2          while (--j);
+ 125   2        } while (--i);
+ 126   1      }
+ 127          void Delay3608us(void)  //@11.0592MHz
+ 128          {
+ 129   1        unsigned char data i, j;
+ 130   1      
+ 131   1        i = 39;
+ 132   1        j = 205;
+ 133   1        do
+ 134   1        {
+ 135   2          while (--j);
+ 136   2        } while (--i);
+ 137   1      }
+ 138          void Delay3405us(void)  //@11.0592MHz
+ 139          {
+ 140   1        unsigned char data i, j;
+ 141   1      
+ 142   1        _nop_();
+ 143   1        _nop_();
+ 144   1        _nop_();
+ 145   1        i = 37;
+ 146   1        j = 157;
+ 147   1        do
+ 148   1        {
+ 149   2          while (--j);
+ 150   2        } while (--i);
+ 151   1      }
+ 152          void Delay3214us(void)  //@11.0592MHz
+ 153          {
+ 154   1        unsigned char data i, j;
+ 155   1      
+ 156   1        _nop_();
+ 157   1        _nop_();
+ 158   1        i = 35;
+ 159   1        j = 143;
+ 160   1        do
+ 161   1        {
+ 162   2          while (--j);
+ 163   2        } while (--i);
+ 164   1      }
+ 165          void Delay3034us(void)  //@11.0592MHz
+ 166          {
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 4   
+
+ 167   1        unsigned char data i, j;
+ 168   1      
+ 169   1        i = 33;
+ 170   1        j = 160;
+ 171   1        do
+ 172   1        {
+ 173   2          while (--j);
+ 174   2        } while (--i);
+ 175   1      }
+ 176          void Delay2863us(void)  //@11.0592MHz
+ 177          {
+ 178   1        unsigned char data i, j;
+ 179   1      
+ 180   1        i = 31;
+ 181   1        j = 201;
+ 182   1        do
+ 183   1        {
+ 184   2          while (--j);
+ 185   2        } while (--i);
+ 186   1      }
+ 187          void Delay2703us(void)  //@11.0592MHz
+ 188          {
+ 189   1        unsigned char data i, j;
+ 190   1      
+ 191   1        _nop_();
+ 192   1        _nop_();
+ 193   1        _nop_();
+ 194   1        i = 30;
+ 195   1        j = 15;
+ 196   1        do
+ 197   1        {
+ 198   2          while (--j);
+ 199   2        } while (--i);
+ 200   1      }
+ 201          void Delay2551us(void)  //@11.0592MHz
+ 202          {
+ 203   1        unsigned char data i, j;
+ 204   1      
+ 205   1        _nop_();
+ 206   1        _nop_();
+ 207   1        i = 28;
+ 208   1        j = 109;
+ 209   1        do
+ 210   1        {
+ 211   2          while (--j);
+ 212   2        } while (--i);
+ 213   1      }
+ 214          void Delay2408us(void)  //@11.0592MHz
+ 215          {
+ 216   1        unsigned char data i, j;
+ 217   1      
+ 218   1        _nop_();
+ 219   1        i = 26;
+ 220   1        j = 228;
+ 221   1        do
+ 222   1        {
+ 223   2          while (--j);
+ 224   2        } while (--i);
+ 225   1      }
+ 226          void Delay2273us(void)  //@11.0592MHz
+ 227          {
+ 228   1        unsigned char data i, j;
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 5   
+
+ 229   1      
+ 230   1        i = 25;
+ 231   1        j = 112;
+ 232   1        do
+ 233   1        {
+ 234   2          while (--j);
+ 235   2        } while (--i);
+ 236   1      }
+ 237          void Delay2145us(void)  //@11.0592MHz
+ 238          {
+ 239   1        unsigned char data i, j;
+ 240   1      
+ 241   1        i = 24;
+ 242   1        j = 15;
+ 243   1        do
+ 244   1        {
+ 245   2          while (--j);
+ 246   2        } while (--i);
+ 247   1      }
+ 248          void Delay2025us(void)  //@11.0592MHz
+ 249          {
+ 250   1        unsigned char data i, j;
+ 251   1      
+ 252   1        _nop_();
+ 253   1        i = 22;
+ 254   1        j = 197;
+ 255   1        do
+ 256   1        {
+ 257   2          while (--j);
+ 258   2        } while (--i);
+ 259   1      }
+ 260          void Delay1911us(void)  //@11.0592MHz
+ 261          {
+ 262   1        unsigned char data i, j;
+ 263   1      
+ 264   1        i = 21;
+ 265   1        j = 139;
+ 266   1        do
+ 267   1        {
+ 268   2          while (--j);
+ 269   2        } while (--i);
+ 270   1      }
+ 271          void Delay1804us(void)  //@11.0592MHz
+ 272          {
+ 273   1        unsigned char data i, j;
+ 274   1      
+ 275   1        _nop_();
+ 276   1        i = 20;
+ 277   1        j = 100;
+ 278   1        do
+ 279   1        {
+ 280   2          while (--j);
+ 281   2        } while (--i);
+ 282   1      }
+ 283          void Delay1703us(void)  //@11.0592MHz
+ 284          {
+ 285   1        unsigned char data i, j;
+ 286   1      
+ 287   1        i = 19;
+ 288   1        j = 78;
+ 289   1        do
+ 290   1        {
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 6   
+
+ 291   2          while (--j);
+ 292   2        } while (--i);
+ 293   1      }
+ 294          void Delay1607us(void)  //@11.0592MHz
+ 295          {
+ 296   1        unsigned char data i, j;
+ 297   1      
+ 298   1        _nop_();
+ 299   1        _nop_();
+ 300   1        i = 18;
+ 301   1        j = 69;
+ 302   1        do
+ 303   1        {
+ 304   2          while (--j);
+ 305   2        } while (--i);
+ 306   1      }
+ 307          void Delay1517us(void)  //@11.0592MHz
+ 308          {
+ 309   1        unsigned char data i, j;
+ 310   1      
+ 311   1        _nop_();
+ 312   1        _nop_();
+ 313   1        _nop_();
+ 314   1        i = 17;
+ 315   1        j = 77;
+ 316   1        do
+ 317   1        {
+ 318   2          while (--j);
+ 319   2        } while (--i);
+ 320   1      }
+ 321          void Delay1432us(void)  //@11.0592MHz
+ 322          {
+ 323   1        unsigned char data i, j;
+ 324   1      
+ 325   1        _nop_();
+ 326   1        _nop_();
+ 327   1        _nop_();
+ 328   1        i = 16;
+ 329   1        j = 99;
+ 330   1        do
+ 331   1        {
+ 332   2          while (--j);
+ 333   2        } while (--i);
+ 334   1      }
+ 335          void Delay1351us(void)  //@11.0592MHz
+ 336          {
+ 337   1        unsigned char data i, j;
+ 338   1      
+ 339   1        _nop_();
+ 340   1        _nop_();
+ 341   1        _nop_();
+ 342   1        i = 15;
+ 343   1        j = 132;
+ 344   1        do
+ 345   1        {
+ 346   2          while (--j);
+ 347   2        } while (--i);
+ 348   1      }
+ 349          void Delay1276us(void)  //@11.0592MHz
+ 350          {
+ 351   1        unsigned char data i, j;
+ 352   1      
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 7   
+
+ 353   1        _nop_();
+ 354   1        _nop_();
+ 355   1        i = 14;
+ 356   1        j = 182;
+ 357   1        do
+ 358   1        {
+ 359   2          while (--j);
+ 360   2        } while (--i);
+ 361   1      }
+ 362          void Delay1204us(void)  //@11.0592MHz
+ 363          {
+ 364   1        unsigned char data i, j;
+ 365   1      
+ 366   1        _nop_();
+ 367   1        i = 13;
+ 368   1        j = 240;
+ 369   1        do
+ 370   1        {
+ 371   2          while (--j);
+ 372   2        } while (--i);
+ 373   1      }
+ 374          void Delay1136us(void)  //@11.0592MHz
+ 375          {
+ 376   1        unsigned char data i, j;
+ 377   1      
+ 378   1        _nop_();
+ 379   1        i = 13;
+ 380   1        j = 52;
+ 381   1        do
+ 382   1        {
+ 383   2          while (--j);
+ 384   2        } while (--i);
+ 385   1      }
+ 386          void Delay1073us(void)  //@11.0592MHz
+ 387          {
+ 388   1        unsigned char data i, j;
+ 389   1      
+ 390   1        _nop_();
+ 391   1        i = 12;
+ 392   1        j = 135;
+ 393   1        do
+ 394   1        {
+ 395   2          while (--j);
+ 396   2        } while (--i);
+ 397   1      }
+ 398          void Delay1012us(void)  //@11.0592MHz
+ 399          {
+ 400   1        unsigned char data i, j;
+ 401   1      
+ 402   1        _nop_();
+ 403   1        _nop_();
+ 404   1        i = 11;
+ 405   1        j = 223;
+ 406   1        do
+ 407   1        {
+ 408   2          while (--j);
+ 409   2        } while (--i);
+ 410   1      }
+ 411          
+ 412          
+ 413          
+ 414          
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 8   
+
+ 415          
+ 416          
+ 417          
+ 418          
+ 419          
+ 420          void Delay956us(void) //@11.0592MHz
+ 421          {
+ 422   1        unsigned char data i, j;
+ 423   1      
+ 424   1        _nop_();
+ 425   1        _nop_();
+ 426   1        _nop_();
+ 427   1        i = 11;
+ 428   1        j = 68;
+ 429   1        do
+ 430   1        {
+ 431   2          while (--j);
+ 432   2        } while (--i);
+ 433   1      }
+ 434          
+ 435          
+ 436          
+ 437          
+ 438          
+ 439          
+ 440          
+ 441          
+ 442          
+ 443          void Delay902us(void) //@11.0592MHz
+ 444          {
+ 445   1        unsigned char data i, j;
+ 446   1      
+ 447   1        _nop_();
+ 448   1        i = 10;
+ 449   1        j = 176;
+ 450   1        do
+ 451   1        {
+ 452   2          while (--j);
+ 453   2        } while (--i);
+ 454   1      }
+ 455          void Delay851us(void) //@11.0592MHz
+ 456          {
+ 457   1        unsigned char data i, j;
+ 458   1      
+ 459   1        _nop_();
+ 460   1        i = 10;
+ 461   1        j = 35;
+ 462   1        do
+ 463   1        {
+ 464   2          while (--j);
+ 465   2        } while (--i);
+ 466   1      }
+ 467          void Delay804us(void) //@11.0592MHz
+ 468          {
+ 469   1        unsigned char data i, j;
+ 470   1      
+ 471   1        _nop_();
+ 472   1        _nop_();
+ 473   1        i = 9;
+ 474   1        j = 162;
+ 475   1        do
+ 476   1        {
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 9   
+
+ 477   2          while (--j);
+ 478   2        } while (--i);
+ 479   1      }
+ 480          void Delay758us(void) //@11.0592MHz
+ 481          {
+ 482   1        unsigned char data i, j;
+ 483   1      
+ 484   1        _nop_();
+ 485   1        i = 9;
+ 486   1        j = 35;
+ 487   1        do
+ 488   1        {
+ 489   2          while (--j);
+ 490   2        } while (--i);
+ 491   1      }
+ 492          void Delay716us(void) //@11.0592MHz
+ 493          {
+ 494   1        unsigned char data i, j;
+ 495   1      
+ 496   1        i = 8;
+ 497   1        j = 176;
+ 498   1        do
+ 499   1        {
+ 500   2          while (--j);
+ 501   2        } while (--i);
+ 502   1      }
+ 503          void Delay676us(void) //@11.0592MHz
+ 504          {
+ 505   1        unsigned char data i, j;
+ 506   1      
+ 507   1        _nop_();
+ 508   1        _nop_();
+ 509   1        i = 8;
+ 510   1        j = 65;
+ 511   1        do
+ 512   1        {
+ 513   2          while (--j);
+ 514   2        } while (--i);
+ 515   1      }
+ 516          void Delay638us(void) //@11.0592MHz
+ 517          {
+ 518   1        unsigned char data i, j;
+ 519   1      
+ 520   1        _nop_();
+ 521   1        _nop_();
+ 522   1        i = 7;
+ 523   1        j = 217;
+ 524   1        do
+ 525   1        {
+ 526   2          while (--j);
+ 527   2        } while (--i);
+ 528   1      }
+ 529          void Delay602us(void) //@11.0592MHz
+ 530          {
+ 531   1        unsigned char data i, j;
+ 532   1      
+ 533   1        i = 7;
+ 534   1        j = 118;
+ 535   1        do
+ 536   1        {
+ 537   2          while (--j);
+ 538   2        } while (--i);
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 10  
+
+ 539   1      }
+ 540          void Delay568us(void) //@11.0592MHz
+ 541          {
+ 542   1        unsigned char data i, j;
+ 543   1      
+ 544   1        i = 7;
+ 545   1        j = 24;
+ 546   1        do
+ 547   1        {
+ 548   2          while (--j);
+ 549   2        } while (--i);
+ 550   1      }
+ 551          void Delay536us(void) //@11.0592MHz
+ 552          {
+ 553   1        unsigned char data i, j;
+ 554   1      
+ 555   1        _nop_();
+ 556   1        _nop_();
+ 557   1        i = 6;
+ 558   1        j = 192;
+ 559   1        do
+ 560   1        {
+ 561   2          while (--j);
+ 562   2        } while (--i);
+ 563   1      }
+ 564          void Delay506us(void) //@11.0592MHz
+ 565          {
+ 566   1        unsigned char data i, j;
+ 567   1      
+ 568   1        _nop_();
+ 569   1        _nop_();
+ 570   1        i = 6;
+ 571   1        j = 109;
+ 572   1        do
+ 573   1        {
+ 574   2          while (--j);
+ 575   2        } while (--i);
+ 576   1      }
+ 577          void Delay478us(void) //@11.0592MHz
+ 578          {
+ 579   1        unsigned char data i, j;
+ 580   1      
+ 581   1        i = 6;
+ 582   1        j = 32;
+ 583   1        do
+ 584   1        {
+ 585   2          while (--j);
+ 586   2        } while (--i);
+ 587   1      }
+ 588          void Delay451us(void) //@11.0592MHz
+ 589          {
+ 590   1        unsigned char data i, j;
+ 591   1      
+ 592   1        _nop_();
+ 593   1        _nop_();
+ 594   1        i = 5;
+ 595   1        j = 214;
+ 596   1        do
+ 597   1        {
+ 598   2          while (--j);
+ 599   2        } while (--i);
+ 600   1      }
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 11  
+
+ 601          void Delay426us(void) //@11.0592MHz
+ 602          {
+ 603   1        unsigned char data i, j;
+ 604   1      
+ 605   1        _nop_();
+ 606   1        i = 5;
+ 607   1        j = 145;
+ 608   1        do
+ 609   1        {
+ 610   2          while (--j);
+ 611   2        } while (--i);
+ 612   1      }
+ 613          void Delay402us(void) //@11.0592MHz
+ 614          {
+ 615   1        unsigned char data i, j;
+ 616   1      
+ 617   1        i = 5;
+ 618   1        j = 79;
+ 619   1        do
+ 620   1        {
+ 621   2          while (--j);
+ 622   2        } while (--i);
+ 623   1      }
+ 624          void Delay379us(void) //@11.0592MHz
+ 625          {
+ 626   1        unsigned char data i, j;
+ 627   1      
+ 628   1        _nop_();
+ 629   1        i = 5;
+ 630   1        j = 15;
+ 631   1        do
+ 632   1        {
+ 633   2          while (--j);
+ 634   2        } while (--i);
+ 635   1      }
+ 636          void Delay358us(void) //@11.0592MHz
+ 637          {
+ 638   1        unsigned char data i, j;
+ 639   1      
+ 640   1        _nop_();
+ 641   1        i = 4;
+ 642   1        j = 214;
+ 643   1        do
+ 644   1        {
+ 645   2          while (--j);
+ 646   2        } while (--i);
+ 647   1      }
+ 648          void Delay338us(void) //@11.0592MHz
+ 649          {
+ 650   1        unsigned char data i, j;
+ 651   1      
+ 652   1        i = 4;
+ 653   1        j = 159;
+ 654   1        do
+ 655   1        {
+ 656   2          while (--j);
+ 657   2        } while (--i);
+ 658   1      }
+ 659          void Delay319us(void) //@11.0592MHz
+ 660          {
+ 661   1        unsigned char data i, j;
+ 662   1      
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 12  
+
+ 663   1        _nop_();
+ 664   1        _nop_();
+ 665   1        i = 4;
+ 666   1        j = 106;
+ 667   1        do
+ 668   1        {
+ 669   2          while (--j);
+ 670   2        } while (--i);
+ 671   1      }
+ 672          void Delay301us(void) //@11.0592MHz
+ 673          {
+ 674   1        unsigned char data i, j;
+ 675   1      
+ 676   1        _nop_();
+ 677   1        _nop_();
+ 678   1        _nop_();
+ 679   1        i = 4;
+ 680   1        j = 56;
+ 681   1        do
+ 682   1        {
+ 683   2          while (--j);
+ 684   2        } while (--i);
+ 685   1      }
+ 686          void Delay284us(void) //@11.0592MHz
+ 687          {
+ 688   1        unsigned char data i, j;
+ 689   1      
+ 690   1        _nop_();
+ 691   1        _nop_();
+ 692   1        _nop_();
+ 693   1        i = 4;
+ 694   1        j = 9;
+ 695   1        do
+ 696   1        {
+ 697   2          while (--j);
+ 698   2        } while (--i);
+ 699   1      }
+ 700          void Delay268us(void) //@11.0592MHz
+ 701          {
+ 702   1        unsigned char data i, j;
+ 703   1      
+ 704   1        _nop_();
+ 705   1        _nop_();
+ 706   1        i = 3;
+ 707   1        j = 222;
+ 708   1        do
+ 709   1        {
+ 710   2          while (--j);
+ 711   2        } while (--i);
+ 712   1      }
+ 713          void Delay253us(void) //@11.0592MHz
+ 714          {
+ 715   1        unsigned char data i, j;
+ 716   1      
+ 717   1        i = 3;
+ 718   1        j = 181;
+ 719   1        do
+ 720   1        {
+ 721   2          while (--j);
+ 722   2        } while (--i);
+ 723   1      }
+ 724          void Delay239us(void) //@11.0592MHz
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 13  
+
+ 725          {
+ 726   1        unsigned char data i, j;
+ 727   1      
+ 728   1        _nop_();
+ 729   1        i = 3;
+ 730   1        j = 142;
+ 731   1        do
+ 732   1        {
+ 733   2          while (--j);
+ 734   2        } while (--i);
+ 735   1      }
+ 736          void Delay225us(void) //@11.0592MHz
+ 737          {
+ 738   1        unsigned char data i, j;
+ 739   1      
+ 740   1        _nop_();
+ 741   1        _nop_();
+ 742   1        i = 3;
+ 743   1        j = 103;
+ 744   1        do
+ 745   1        {
+ 746   2          while (--j);
+ 747   2        } while (--i);
+ 748   1      }
+ 749          void Delay213us(void) //@11.0592MHz
+ 750          {
+ 751   1        unsigned char data i, j;
+ 752   1      
+ 753   1        _nop_();
+ 754   1        _nop_();
+ 755   1        i = 3;
+ 756   1        j = 70;
+ 757   1        do
+ 758   1        {
+ 759   2          while (--j);
+ 760   2        } while (--i);
+ 761   1      }
+ 762          void Delay201us(void) //@11.0592MHz
+ 763          {
+ 764   1        unsigned char data i, j;
+ 765   1      
+ 766   1        _nop_();
+ 767   1        i = 3;
+ 768   1        j = 37;
+ 769   1        do
+ 770   1        {
+ 771   2          while (--j);
+ 772   2        } while (--i);
+ 773   1      }
+ 774          void Delay190us(void) //@11.0592MHz
+ 775          {
+ 776   1        unsigned char data i, j;
+ 777   1      
+ 778   1        _nop_();
+ 779   1        _nop_();
+ 780   1        _nop_();
+ 781   1        i = 3;
+ 782   1        j = 6;
+ 783   1        do
+ 784   1        {
+ 785   2          while (--j);
+ 786   2        } while (--i);
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 14  
+
+ 787   1      }
+ 788          void Delay179us(void) //@11.0592MHz
+ 789          {
+ 790   1        unsigned char data i, j;
+ 791   1      
+ 792   1        _nop_();
+ 793   1        _nop_();
+ 794   1        i = 2;
+ 795   1        j = 233;
+ 796   1        do
+ 797   1        {
+ 798   2          while (--j);
+ 799   2        } while (--i);
+ 800   1      }
+ 801          void Delay169us(void) //@11.0592MHz
+ 802          {
+ 803   1        unsigned char data i, j;
+ 804   1      
+ 805   1        _nop_();
+ 806   1        _nop_();
+ 807   1        _nop_();
+ 808   1        i = 2;
+ 809   1        j = 205;
+ 810   1        do
+ 811   1        {
+ 812   2          while (--j);
+ 813   2        } while (--i);
+ 814   1      }
+ 815          void Delay159us(void) //@11.0592MHz
+ 816          {
+ 817   1        unsigned char data i, j;
+ 818   1      
+ 819   1        i = 2;
+ 820   1        j = 178;
+ 821   1        do
+ 822   1        {
+ 823   2          while (--j);
+ 824   2        } while (--i);
+ 825   1      }
+ 826          void Delay150us(void) //@11.0592MHz
+ 827          {
+ 828   1        unsigned char data i, j;
+ 829   1      
+ 830   1        _nop_();
+ 831   1        i = 2;
+ 832   1        j = 153;
+ 833   1        do
+ 834   1        {
+ 835   2          while (--j);
+ 836   2        } while (--i);
+ 837   1      }
+ 838          void Delay142us(void) //@11.0592MHz
+ 839          {
+ 840   1        unsigned char data i, j;
+ 841   1      
+ 842   1        i = 2;
+ 843   1        j = 131;
+ 844   1        do
+ 845   1        {
+ 846   2          while (--j);
+ 847   2        } while (--i);
+ 848   1      }
+C51 COMPILER V9.59.0.0   ZX_SNW_MUSIC_204_ALLTUNE                                          10/29/2024 07:30:55 PAGE 15  
+
+ 849          void Delay134us(void) //@11.0592MHz
+ 850          {
+ 851   1        unsigned char data i, j;
+ 852   1      
+ 853   1        i = 2;
+ 854   1        j = 109;
+ 855   1        do
+ 856   1        {
+ 857   2          while (--j);
+ 858   2        } while (--i);
+ 859   1      }
+ 860          void Delay127us(void) //@11.0592MHz
+ 861          {
+ 862   1        unsigned char data i, j;
+ 863   1      
+ 864   1        _nop_();
+ 865   1        _nop_();
+ 866   1        _nop_();
+ 867   1        i = 2;
+ 868   1        j = 89;
+ 869   1        do
+ 870   1        {
+ 871   2          while (--j);
+ 872   2        } while (--i);
+ 873   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1203    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       5
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
